@@ -1,13 +1,15 @@
-# api-testing-demo
-### TC001 - Get all posts  Description: Verify that the API returns a list of posts successfully.  Priority: High  Preconditions: - API is available  Request: GET https://jsonplaceholder.typicode.com/posts  Expected result: - Status code is 200 - Response is JSON - Response contains list of posts
-## 🧪 Scope
-- Testing GET /posts
-- Testing GET /posts/{id}
-- Status code validation
-- Response structure validation
-- ## 💡 What I Learned
-- How to test API endpoints using Postman
-- How to validate status codes and responses
-- How to think about edge cases in API testing
-- ## 🌐 API
-https://jsonplaceholder.typicode.com
+# 👋 Hi, I'm David
+
+💻 Junior QA Engineer (API Testing)
+
+## 🔧 Skills
+- API Testing (Postman)
+- Test Case Design
+- Bug Reporting
+- HTTP & REST APIs
+
+## 📂 Projects
+- API Testing Demo (Postman, Test Cases, Bug Reports)
+
+## 🚀 Goal
+Looking for a Junior QA position where I can grow and deliver quality software.
