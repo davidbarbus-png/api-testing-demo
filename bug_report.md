@@ -1,33 +1,16 @@
-# API Bug Report
+## 🐞 Bug Report: BUG001
 
-## Bug 001 - Inconsistent response for non-existing post
+**Title:** API returns incorrect status code for invalid post ID
 
-Steps to reproduce:
-1. Send GET request to /posts/9999
+**Steps to reproduce:**
+1. Send GET https://jsonplaceholder.typicode.com/posts/999999
 
-Expected result:
-API should return 404 Not Found
+**Expected Result:**
+- Status code 404 Not Found
 
-Actual result:
-API returns empty object instead of clear error
+**Actual Result:**
+- Status code 200 OK
+- Empty response returned
 
-Severity: Medium  
-Priority: Medium  
-Environment: Postman / Desktop
-
----
-
-## Bug 002 - Generic error response for invalid endpoint
-
-Steps to reproduce:
-1. Send GET request to /invalid
-
-Expected result:
-Clear and structured error message
-
-Actual result:
-Unclear or generic response
-
-Severity: Low  
-Priority: Low  
-Environment: Postman / Desktop
+**Severity:** Medium  
+**Priority:** High
