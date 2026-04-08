@@ -1,74 +1,50 @@
-# API Test Cases
+## 🧪 Test Case: TC001 - Get all posts
 
-## TC001 - Get all posts
+**Description:**  
+Verify that the API returns a list of posts successfully.
 
-Description:
-Verify that the API returns a list of posts.
+**Priority:** High
 
-Priority: High
-
-Preconditions:
+**Preconditions:**  
 - API is available
 
-Request:
-GET https://jsonplaceholder.typicode.com/posts
+**Steps:**
+1. Send GET request to https://jsonplaceholder.typicode.com/posts
 
-Expected result:
+**Expected Result:**
 - Status code is 200
-- Response is JSON
-- Response contains list of posts
+- Response is in JSON format
+- Response contains a list of posts
+- Each post contains: id, title, body
 
----
-
-## TC002 - Get single post
-
-Description:
-Verify that a specific post can be retrieved by ID.
-
-Priority: High
-
-Preconditions:
-- API is available
-
-Request:
-GET https://jsonplaceholder.typicode.com/posts/1
-
-Expected result:
+**Actual Result:**
 - Status code is 200
-- Response contains post with ID = 1
+- Response returned JSON array with posts
+- Structure is correct
 
----
+**Status:** PASS
+## 🧪 Test Case: TC002 - Get post by valid ID
 
-## TC003 - Invalid endpoint
+Steps:
+1. Send GET /posts/1
 
-Description:
-Verify that API returns correct error for invalid endpoint.
+Expected:
+- 200 OK
+- Returns post with ID = 1
 
-Priority: Medium
+Actual:
+- Works correctly
 
-Preconditions:
-- API is available
+Status: PASS
+## 🧪 Test Case: TC003 - Get post by invalid ID
 
-Request:
-GET https://jsonplaceholder.typicode.com/invalid
+Steps:
+1. Send GET /posts/999999
 
-Expected result:
-- Status code is 404
+Expected:
+- 404 Not Found
 
----
+Actual:
+- API returns 200 with empty object
 
-## TC004 - Non-existing post ID
-
-Description:
-Verify behavior when requesting non-existing resource.
-
-Priority: Medium
-
-Preconditions:
-- API is available
-
-Request:
-GET https://jsonplaceholder.typicode.com/posts/9999
-
-Expected result:
-- Status code is 404 or empty response
+Status: FAIL
